@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERZITETI</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h2,
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        h2 {
+            margin-top: 70px;
+        }
+
+        a {
+            text-decoration: none;
+            margin: 15px 10px;
+            display: inline-block;
+            color: teal;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        table {
+            max-width: 800px;
+            margin: 10px auto;
+        }
+
+        td {
+            line-height: 4px;
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include ("partial") %>
+        <table width="100%" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Type</th>
+                <th>Delete University</th>
+            </tr>
+            <% data.forEach((faculty, index)=>{ %>
+                <tr>
+                    <td>
+                        <%=faculty.name%>
+                    </td>
+                    <td>
+                        <%=faculty.location%>
+                    </td>
+                    <td>
+                        <%=faculty.university%>
+                    </td>
+                    <td><a href="/universities/delete/<%=university.id%>">Delete</a></td>
+                </tr>
+                <% }) %>
+        </table>
+</body>
+
+</html>

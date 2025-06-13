@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        div {
+            max-width: 600px;
+            margin: 100px auto;
+        }
+
+        h2,
+        h1,
+        p {
+            text-align: center;
+        }
+
+        p {
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>
+            <%=data.text%>
+        </h2>
+        <h1>
+            <%=data.code%>
+        </h1>
+        <p>
+            <%=data.message%>
+        </p>
+    </div>
+</body>
+
+</html>

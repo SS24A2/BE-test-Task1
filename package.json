@@ -1,0 +1,26 @@
+{
+  "name": "be-test-task1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SS24A2/BE-test-Task1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SS24A2/BE-test-Task1/issues"
+  },
+  "homepage": "https://github.com/SS24A2/BE-test-Task1#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "node-input-validator": "^4.5.1"
+  }
+}

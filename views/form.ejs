@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        fieldset {
+            margin: 10px 10px;
+            font-weight: 600;
+        }
+
+        input {
+            text-align: center;
+            margin: 3px 5px;
+        }
+     
+        button {
+            margin: 20px;
+            height: 28px;
+            color:teal;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            background-color: rgb(216, 243, 251);
+            border:1px solid lightgray;
+        }
+      
+        button:hover{
+            background-color: black;
+        }
+        
+        h2,
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        h2 {
+            margin-top: 70px;
+        }
+
+        a {
+            text-decoration: none;
+            margin: 15px 10px;
+            display: inline-block;
+            color:teal;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color:blue;
+        }
+
+        span {
+            font-size: 18px;
+            color: red;
+            display: inline-block;
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>faculties</h2>
+        <nav>
+            <a href="/universities/list">Display list of faculties</a>
+            <a href="/universities/form">Add new faculty</a>
+        </nav>
+    </header>
+    <form action="/universities/form" method="POST">
+        <fieldset>
+            <legend>faculty Name</legend>
+            <input type="text" name="name" placeholder="enter university name" required>
+        </fieldset>
+        <fieldset>
+            <legend>faculty Location</legend>
+            <input type="text" name="location" placeholder="enter university location" required>
+        </fieldset>
+        <fieldset>
+            <legend>univeristy</legend>
+            <select name="university">
+                <option value="">--Please choose an option--</option>
+                <option value="UKIM">UKIM</option>
+                <option value="Mother Teresa University">Mother Teresa University</option>
+             </select>
+        </fieldset>
+       
+        <button type="submit">Save faculty</button>
+    </form>
+    <span><%=data.message%></span>
+    <span><%=data.rule%></span>
+</body>
+
+</html>
